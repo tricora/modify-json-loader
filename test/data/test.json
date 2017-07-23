@@ -1,0 +1,21 @@
+{
+    "name": "KO",
+    "age": 1234,
+    "obj": {
+        "subName": null,
+        "nested": {
+            "final": 42
+        }
+    },
+    "array": [
+        "first",
+        {
+            "key": "value"
+        },
+        [
+            0,
+            1,
+            2
+        ]
+    ]
+}
