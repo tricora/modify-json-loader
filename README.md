@@ -28,7 +28,7 @@ module: {
 ```
 ### Pointers
 This loader uses [JSON pointer](https://tools.ietf.org/html/rfc6901) to address specific properties in JSON.
-```json
+```js
 /* json */                     /* pointer */
 {
   "foo": "bar",                /foo
@@ -51,7 +51,7 @@ Type:    pointer || [pointer]
 Default: undefined
 ```
 If set, only properties matching the pointers are written into output result.
-```json
+```js
 include: ['/foo', '/language/de']
 	=>
 {
@@ -68,8 +68,8 @@ Type:    pointer || [pointer]
 Default: undefined
 ```
 If set, only properties not matching the pointers are written into output result.
-```json
-exclude: ['/language/de', '/list]
+```js
+exclude: ['/language/de', '/list']
 	=>
 {
   "foo": "bar",
@@ -91,7 +91,7 @@ The set options allows to change or create new properties for the output JSON. T
  - `function(originalValue, originalJSON)`: set the pointer to the result of a provided function. The function is invoked with two parameters:
 	 - `originalValue`: the value found in the original json for that pointer. `undefined` if pointer does not exist in original JSON.
 	 - `originalJSON`: the original JSON object
-```json
+```js
 set: {
   '/foo': (val, json) => `Bier${val}`,
   '/time': () => new Date(),

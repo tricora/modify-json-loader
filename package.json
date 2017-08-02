@@ -1,7 +1,7 @@
 {
   "name": "modify-json-loader",
   "version": "0.0.1",
-  "description": "Manipulate properties or create whole json objects ",
+  "description": "Modify properties or create whole json objects before loading with json-loader",
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run compile && mocha --compilers js:babel-register --require test/helpers.js",
