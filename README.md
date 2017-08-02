@@ -79,6 +79,7 @@ exclude: ['/language/de', '/list']
 }
 ```
 >**Note:** including or excluding array elements is not working properly at the moment.
+
 #### ***.set***
 ```
 Type:    object
@@ -113,3 +114,22 @@ set: {
 }
 ```
 
+#### ***.stringified***
+```
+Type: boolean
+Default: false
+```
+If not set, the loader outputs the manipulated JSON as a plain java object. If set to ```true```, the output is a converted to a JSON string.
+
+#### ***.disableCaching***
+```
+Type: boolean
+Default: false
+```
+If set to ```true``` the loader will prevent webpack from caching its result. This is useful if your are using the the ***.set*** option in combination with a function providing dynamic results for repeated runs.
+```js
+set: {
+  '/time': () => new Date(),
+},
+disableCaching: true
+```

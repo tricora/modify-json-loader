@@ -5,7 +5,7 @@ const utils = require('./utils');
 module.exports = function(source) {
     try {
         const options = loaderUtils.getOptions(this);
-        if (options && options.disableCaching) {
+        if (options && options.disableCaching === true) {
             //disable caching
             if (this.version >= 2 && this.cacheable) {
                 this.cacheable(false);
