@@ -1,14 +1,14 @@
 {
   "name": "modify-json-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Modify properties or create whole json objects before loading with json-loader",
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run compile && mocha --compilers js:babel-register --require test/helpers.js",
     "compile": "babel -d dist/ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm test"
   },
-  "author": "tricora",
+  "author": "Tillmann Patitz (tillmann.patitz@gmail.com)",
   "license": "ISC",
   "dependencies": {
     "json-pointer": "^0.6.0",
@@ -16,20 +16,27 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
     "chai": "^4.1.0",
     "mocha": "^3.4.2",
     "sinon": "^2.3.8"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tricora/modify-json-loader.git"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
   "keywords": [
-    "change",
     "create",
     "edit",
     "json",
     "loader",
     "modify",
-    "pointer",
     "webpack"
   ]
 }
