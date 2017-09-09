@@ -8,7 +8,7 @@
     "compile": "babel -d dist/ src/",
     "prepublish": "npm test"
   },
-  "author": "Tillmann Patitz (tillmann.patitz@gmail.com)",
+  "author": "Tillmann Patitz <patitz.t@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "json-pointer": "^0.6.0",
