@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run compile && mocha --compilers js:babel-register --require test/helpers.js",
     "compile": "babel -d dist/ src/",
-    "prepublish": "npm test"
+    "prepublishOnly": "npm test"
   },
   "author": "Tillmann Patitz <tillmann.patitz@gmail.com>",
   "license": "ISC",
