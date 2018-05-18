@@ -19,7 +19,7 @@ describe('modify-json-loader', () => {
     it('should create empty object if called with undefined input', () => {
         expect(loader.call({})).to.deep.equal({});
     });
-    
+
     it('should output js object without any options', () => {
         const output = loader.call({}, '{"key": "val"}');
         expect(output).to.deep.equal({key: 'val'});
@@ -55,7 +55,7 @@ describe('modify-json-loader', () => {
             cacheable: spy
         });
         expect(spy.calledWith()).to.be.true;
-        spy.reset();
+        spy.resetHistory();
         loader.call({
             version: 2,
             cacheable: spy
@@ -71,7 +71,7 @@ describe('modify-json-loader', () => {
             cacheable: spy
         });
         expect(spy.notCalled).to.be.true;
-        spy.reset();
+        spy.resetHistory();
         loader.call({
             version: 2,
             query: { disableCaching: true },
