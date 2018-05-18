@@ -67,7 +67,7 @@ module.exports = function(source) {
         }
 
         return options.stringified === true ? JSON.stringify(result) : result;
-        
+
     } catch (error) {
         throw new Error('modify-json-loader: ' + error.message);
     }
